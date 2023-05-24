@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include<math.h>
+
+int isPerfSq(int y)
+{
+    int a=sqrt(y);
+    
+    if(a*a==y)
+        return 1;
+        
+    return 0;
+}
+
+int fib(int x)
+{
+    if(isPerfSq((5 * x * x) + 4) || isPerfSq((5 * x * x) - 4))
+        return 1;
+    else
+        return 0;
+}
+
+int main()
+{
+    int n;
+    
+    printf("Enter a number:\n");
+    scanf("%d", &n);
+    
+    if(fib(n))
+        printf("Number is Fibonacci\n");
+    else
+        printf("Number is not Fibonacci\n");
+
+    return 0;
+}
